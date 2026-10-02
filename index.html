@@ -423,6 +423,45 @@ section {
     margin-bottom: 0 !important;
     font-style: italic;
 }
+    .reasons {
+    background: #fff4f6;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 750px;
+    margin: auto;
+}
+
+.reason-card {
+    padding: 28px 22px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(100,25,50,.08);
+}
+
+.reason-card span {
+    font-size: 13px;
+    opacity: .5;
+}
+
+.reason-card h3 {
+    margin: 12px 0 8px;
+}
+
+.reason-card p {
+    margin: 0;
+    line-height: 1.6;
+    opacity: .75;
+}
+
+@media (max-width: 600px) {
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+                                 }
 @media (max-width: 600px) {
     .cards {
         grid-template-columns: 1fr;
@@ -748,6 +787,41 @@ section {
 
     </div>
 </section>
+    <section class="reasons">
+    <div class="inner">
+        <div class="section-label">A few reasons</div>
+
+        <h2 class="section-title">
+            Why you are <em>special to me</em>
+        </h2>
+
+        <div class="reasons-grid">
+            <div class="reason-card">
+                <span>01</span>
+                <h3>Your smile</h3>
+                <p>It has a way of making ordinary moments feel special.</p>
+            </div>
+
+            <div class="reason-card">
+                <span>02</span>
+                <h3>Your presence</h3>
+                <p>Somehow, everything feels a little better when you're around.</p>
+            </div>
+
+            <div class="reason-card">
+                <span>03</span>
+                <h3>The little things</h3>
+                <p>It's the tiny moments with you that I end up remembering the most.</p>
+            </div>
+
+            <div class="reason-card">
+                <span>04</span>
+                <h3>Just you</h3>
+                <p>No big reason needed. You're simply someone very special to me.</p>
+            </div>
+        </div>
+    </div>
+    </section>
 
 <section class="final">
 
