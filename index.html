@@ -17,307 +17,145 @@ html {
 
 body {
     margin: 0;
+    background: #f8dce3;
+    color: #5b1729;
     font-family: Georgia, "Times New Roman", serif;
-    color: white;
-    background: #7d1029;
 }
 
-.section {
+section {
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 35px 22px;
-}
-
-.opening {
-    background:
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.25), transparent 25%),
-        radial-gradient(circle at 80% 80%, rgba(255,150,180,0.25), transparent 30%),
-        linear-gradient(145deg, #ffccd9, #e85d7f 48%, #7d1029);
     position: relative;
     overflow: hidden;
 }
 
-.content {
-    max-width: 650px;
-    width: 100%;
-    position: relative;
-    z-index: 2;
-}
+/* ---------- OPENING ---------- */
 
-.heart-main {
-    font-size: 50px;
-    animation: beat 1.5s infinite;
-}
-
-.line {
-    width: 70px;
-    height: 1px;
-    background: rgba(255,255,255,0.7);
-    margin: 18px auto;
-}
-
-h1 {
-    font-size: clamp(35px, 9vw, 58px);
-    line-height: 1.08;
-    font-weight: normal;
-    margin: 15px 0;
-}
-
-.subtitle {
-    font-size: 20px;
-    font-style: italic;
-    opacity: 0.95;
-}
-
-.name {
-    font-size: 29px;
-    letter-spacing: 3px;
-    margin-top: 10px;
-}
-
-.button {
-    margin-top: 35px;
-    padding: 16px 30px;
-    border: 1px solid white;
-    border-radius: 50px;
-    background: rgba(255,255,255,0.18);
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     color: white;
-    font-size: 17px;
-    font-family: Georgia, serif;
-    cursor: pointer;
-}
-
-.button:hover {
-    background: white;
-    color: #a51d45;
-}
-
-.from {
-    margin-top: 35px;
-    font-size: 14px;
-    opacity: 0.8;
-}
-
-.story {
+    padding: 30px;
     background:
-        radial-gradient(circle at 10% 10%, #ffb6c8, transparent 30%),
-        linear-gradient(160deg, #8b1733, #c72f58, #6d1027);
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,.28), transparent 22%),
+        radial-gradient(circle at 85% 75%, rgba(255,180,200,.25), transparent 28%),
+        linear-gradient(145deg, #ffd6e0, #e85d7f 48%, #75142d);
 }
 
-.story-card {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 28px;
-    padding: 35px 25px;
-    box-shadow: 0 15px 50px rgba(50,0,20,0.25);
-    backdrop-filter: blur(12px);
+.hero-content {
+    max-width: 650px;
+    animation: fadeUp 1.5s ease;
 }
 
-.story-card h2 {
-    font-size: 38px;
+.mini-heart {
+    font-size: 48px;
+    animation: heartbeat 1.6s infinite;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    opacity: .85;
+    margin-top: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 10vw, 70px);
+    line-height: 1;
     font-weight: normal;
-    margin-top: 0;
+    margin: 18px 0;
 }
 
-.story-card p {
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-.highlight {
-    font-size: 23px !important;
+.hero h1 span {
     font-style: italic;
-    margin-top: 25px;
 }
 
-.next {
-    margin-top: 25px;
-    padding: 13px 25px;
-    border: 1px solid white;
-    border-radius: 40px;
-    background: transparent;
+.hero-subtitle {
+    font-size: 19px;
+    font-style: italic;
+    opacity: .9;
+}
+
+.hero-name {
+    font-size: 28px;
+    letter-spacing: 5px;
+    margin-top: 12px;
+}
+
+.open-btn {
+    margin-top: 35px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    border: 1px solid rgba(255,255,255,.8);
+    background: rgba(255,255,255,.15);
     color: white;
     font-family: Georgia, serif;
     font-size: 16px;
+    backdrop-filter: blur(10px);
     cursor: pointer;
+    transition: .3s;
 }
 
-.heart {
-    position: absolute;
-    bottom: -40px;
-    animation: floatUp 8s linear infinite;
-    opacity: 0;
+.open-btn:hover {
+    background: white;
+    color: #8c1735;
+    transform: translateY(-3px);
 }
 
-.h1 { left: 10%; animation-delay: 1s; }
-.h2 { left: 30%; animation-delay: 3s; }
-.h3 { left: 55%; animation-delay: 0s; }
-.h4 { left: 80%; animation-delay: 2s; }
+/* ---------- GENERAL ---------- */
 
-@keyframes beat {
-    0%,100% { transform: scale(1); }
-    50% { transform: scale(1.15); }
+.inner {
+    width: min(900px, 90%);
+    margin: auto;
+    padding: 90px 0;
 }
 
-@keyframes floatUp {
-    0% {
-        transform: translateY(0);
-        opacity: 0;
-    }
-
-    15% {
-        opacity: 0.6;
-    }
-
-    100% {
-        transform: translateY(-110vh) rotate(20deg);
-        opacity: 0;
-    }
+.section-label {
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #a23a57;
 }
-</style>
-</head>
 
-<body>
-
-<section class="section opening" id="home">
-
-    <div class="heart h1">♡</div>
-    <div class="heart h2">♥</div>
-    <div class="heart h3">♡</div>
-    <div class="heart h4">♥</div>
-
-    <div class="content">
-
-        <div class="heart-main">♡</div>
-
-        <div class="line"></div>
-
-        <h1>
-            Happy Boyfriend's Day,<br>
-            My Love
-        </h1>
-
-        <p class="subtitle">
-            A little surprise for you...
-        </p>
-
-        <div class="name">
-            Munni ❤️
-        </div>
-
-        <button class="button" onclick="openHeart()">
-            Open My Heart ♡
-        </button>
-
-        <div class="from">
-            Made with love by Aahana
-        </div>
-
-    </div>
-</section>
-
-
-<section class="section story" id="story">
-
-    <div class="content">
-
-        <div class="story-card">
-
-            <h2>Our Story ♡</h2>
-
-            <p>
-                Sometimes the most beautiful stories begin
-                in the most ordinary ways.
-            </p>
-
-            <p>
-                We started as classmates.
-                Then somehow, we became UNO partners,
-                sitting together, playing with our friends,
-                laughing over silly little things.
-            </p>
-
-            <p>
-                And somewhere between those games,
-                random conversations, friendship and
-                all those little moments...
-                you became someone very special to me.
-            </p>
-
-            <p class="highlight">
-                “I never knew that my UNO partner
-                would become my favourite person.”
-            </p>
-
-            <p>
-                Life had already taken me through some
-                difficult chapters before you came into my life.
-                But you stood beside me, supported me,
-                and helped me find my way through them.
-            </p>
-
-            <p>
-                And slowly, without even realizing it,
-                I started falling for you.
-            </p>
-
-            <button class="next" onclick="document.getElementById('love').scrollIntoView()">
-                There's more... ♡
-            </button>
-
-        </div>
-
-    </div>
-</section>
-
-
-<section class="section story" id="love">
-
-    <div class="content">
-
-        <div class="story-card">
-
-            <h2>And Then There Was Us ❤️</h2>
-
-            <p>
-                You took the first step.
-                I took a little more time.
-                And eventually, I said yes.
-            </p>
-
-            <p>
-                And I'm so glad I did.
-            </p>
-
-            <p>
-                Because today, you're not just my boyfriend.
-                You're my best friend, my favourite person,
-                my partner in all our silly fights,
-                and the person whose little efforts
-                mean more to me than you probably realize.
-            </p>
-
-            <p class="highlight">
-                We fight like kids...
-                and somehow love each other even more afterwards. 😂❤️
-            </p>
-
-        </div>
-
-    </div>
-</section>
-
-
-<script>
-function openHeart() {
-    document.getElementById("story").scrollIntoView({
-        behavior: "smooth"
-    });
+.section-title {
+    text-align: center;
+    font-size: clamp(38px, 8vw, 58px);
+    font-weight: normal;
+    margin: 12px 0 50px;
 }
-</script>
 
-</body>
-</html>
+.section-title em {
+    font-weight: normal;
+}
+
+/* ---------- STORY ---------- */
+
+.story {
+    background:
+        radial-gradient(circle at 90% 10%, #f6b8c8, transparent 25%),
+        #f8dce3;
+}
+
+.story-intro {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    font-size: 19px;
+    line-height: 1.8;
+    color: #713047;
+}
+
+.chapter {
+    margin: 55px auto;
+    max-width: 680px;
+    padding: 34px;
+    background: rgba(255,255,255,.55);
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 30px;
+    box-shadow: 0 15px 45px rgba(100,25,50,.09);
+    backdrop-filter: blur(12px);
+   
