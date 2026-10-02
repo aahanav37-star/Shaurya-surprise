@@ -489,6 +489,63 @@ section {
     font-style: italic;
     opacity: .7;
     }
+    #intro-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff7f8;
+    cursor: pointer;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.intro-content {
+    text-align: center;
+    animation: introFloat 2s ease-in-out infinite;
+}
+
+.intro-heart {
+    font-size: 64px;
+    margin-bottom: 12px;
+}
+
+.intro-small {
+    margin: 0 0 8px;
+    letter-spacing: 2px;
+    font-size: 13px;
+    text-transform: uppercase;
+    opacity: .65;
+}
+
+.intro-content h1 {
+    margin: 0 0 18px;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.intro-name {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    opacity: .7;
+}
+
+@keyframes introFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+#intro-screen.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    }
 @media (max-width: 600px) {
     .cards {
         grid-template-columns: 1fr;
@@ -502,7 +559,14 @@ section {
 </head>
 
 <body>
-
+<div id="intro-screen">
+    <div class="intro-content">
+        <div class="intro-heart">♡</div>
+        <p class="intro-small">A little something</p>
+        <h1>just for you</h1>
+        <p class="intro-name">♡ Tap to open ♡</p>
+    </div>
+</div>
 <section class="hero" id="home">
 
     <div class="float f1">♡</div>
@@ -915,6 +979,11 @@ function goToStory() {
         <div class="final-sign">With love, always ♡</div>
     </div>
 </section>
+    <script>
+    document.getElementById("intro-screen").addEventListener("click", function () {
+        this.classList.add("hide");
+    });
+    </script>
 </body>
 </html>
    
