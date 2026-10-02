@@ -157,5 +157,494 @@ section {
     border: 1px solid rgba(255,255,255,.8);
     border-radius: 30px;
     box-shadow: 0 15px 45px rgba(100,25,50,.09);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);}
+
+.chapter-number {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #b44765;
+}
+
+.chapter h3 {
+    font-size: 29px;
+    font-weight: normal;
+    margin: 12px 0;
+}
+
+.chapter p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #713047;
+}
+
+.quote {
+    text-align: center;
+    font-style: italic;
+    font-size: 23px !important;
+    color: #8d2948 !important;
+    margin-top: 25px;
+}
+
+.little-things {
+    background: linear-gradient(160deg, #7d1029, #bd3659);
+    color: white;
+}
+
+.little-things .section-label {
+    color: #ffdce5;
+}
+
+.little-things .section-title {
+    color: white;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.card {
+    padding: 30px 20px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,.25);
+    background: rgba(255,255,255,.1);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.card .emoji {
+    font-size: 30px;
+}
+
+.card h3 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: .85;
+}
+
+.future {
+    background: #fff1f4;
+}
+
+.future-box {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    padding: 45px 25px;
+    border: 1px solid #edb9c7;
+    border-radius: 35px;
+}
+
+.future-box p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.dreams {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.dream {
+    padding: 13px 20px;
+    border-radius: 50px;
+    background: #f6d5de;
+    color: #7b2038;
+}
+
+.final {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(255,200,215,.3), transparent 30%),
+        linear-gradient(160deg, #d94d70, #6d0d27);
+}
+
+.final-content {
+    max-width: 650px;
+    padding: 30px;
+}
+
+.final h2 {
+    font-size: clamp(40px, 9vw, 65px);
+    font-weight: normal;
+    margin: 15px 0;
+}
+
+.final p {
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: .92;
+}
+
+.signature {
+    margin-top: 35px;
+    font-size: 24px;
+    font-style: italic;
+}
+
+.float {
+    position: absolute;
+    bottom: -30px;
+    opacity: 0;
+    animation: floatUp 9s linear infinite;
+}
+
+.f1 { left: 10%; animation-delay: 1s; }
+.f2 { left: 30%; animation-delay: 4s; }
+.f3 { left: 55%; animation-delay: 2s; }
+.f4 { left: 80%; animation-delay: 5s; }
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    15% {
+        opacity: .5;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(20deg);
+        opacity: 0;
+    }
+}
+
+@keyframes heartbeat {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .chapter {
+        padding: 27px 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero" id="home">
+
+    <div class="float f1">♡</div>
+    <div class="float f2">♥</div>
+    <div class="float f3">♡</div>
+    <div class="float f4">♥</div>
+
+    <div class="hero-content">
+
+        <div class="mini-heart">♡</div>
+
+        <div class="eyebrow">
+            A little something for you
+        </div>
+
+        <h1>
+            Happy Boyfriend's Day,<br>
+            <span>My Love</span>
+        </h1>
+
+        <div class="hero-subtitle">
+            For the boy who became my favourite person.
+        </div>
+
+        <div class="hero-name">
+            Munni ❤️
+        </div>
+
+        <button class="open-btn" onclick="goToStory()">
+            Open My Heart ♡
+        </button>
+
+    </div>
+</section>
+
+<section class="story" id="story">
+
+    <div class="inner">
+
+        <div class="section-label">Chapter One</div>
+
+        <h2 class="section-title">
+            How it became <em>us</em>
+        </h2>
+
+        <p class="story-intro">
+            Some love stories begin with a grand moment.
+            Ours began much more simply.
+        </p>
+
+        <div class="chapter">
+            <div class="chapter-number">01 · THE BEGINNING</div>
+            <h3>Just two classmates</h3>
+            <p>
+                We were classmates first.
+                Nothing extraordinary.
+                Just two people who happened to be
+                in the same place at the same time.
+            </p>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-number">02 · UNO PARTNERS</div>
+            <h3>Then came the silly games</h3>
+            <p>
+                Somehow, we became UNO partners,
+                playing with our friends in class.
+                Those tiny, ordinary moments slowly
+                became some of my favourite memories.
+            </p>
+            <p class="quote">
+                “Who knew an UNO partner would become
+                my favourite person?” ❤️
+            </p>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-number">03 · SOMETHING CHANGED</div>
+            <h3>Friendship became something more</h3>
+            <p>
+                Somewhere between the conversations,
+                laughter, arguments and all those
+                little moments, you became different
+                from everyone else.
+            </p>
+            <p>
+                You became someone I started caring
+                about more than I could explain.
+            </p>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-number">04 · YOU</div>
+            <h3>You came into my life at the right time</h3>
+            <p>
+                I had already been through a difficult
+                chapter before you came into my life.
+                You supported me, stood beside me and
+                helped me through a time when I really
+                needed someone.
+            </p>
+            <p>
+                And somewhere along that journey,
+                I realized how deeply I had started
+                caring for you.
+            </p>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-number">05 · US</div>
+            <h3>And then, there was us ❤️</h3>
+            <p>
+                You took the first step.
+                I took a little time.
+                And eventually, I said yes.
+            </p>
+            <p class="quote">
+                And I'm still so glad that I did.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="little-things">
+
+    <div class="inner">
+
+        <div class="section-label">
+            The little things
+        </div>
+
+        <h2 class="section-title">
+            Things I secretly <em>love</em>
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="emoji">😂</div>
+                <h3>Your favourite hobby: annoying me</h3>
+                <p>
+                    Your love language is apparently
+                    making me angry for absolutely no reason.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">🤍</div>
+                <h3>Holding my hand</h3>
+                <p>
+                    The simplest gesture somehow
+                    makes me feel incredibly loved.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">🫂</div>
+                <h3>Your hugs</h3>
+                <p>
+                    One of those ordinary things
+                    that never feels ordinary to me.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">🌷</div>
+                <h3>The flowers</h3>
+                <p>
+                    Every little romantic gesture
+                    stays somewhere in my heart.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">✨</div>
+                <h3>The way you admire me</h3>
+                <p>
+                    Being appreciated by you means
+                    more than you probably know.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">❤️</div>
+                <h3>Your little efforts</h3>
+                <p>
+                    It's never about how big the gesture is.
+                    It's that you thought of me.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="future">
+
+    <div class="inner">
+
+        <div class="section-label">
+            Someday
+        </div>
+
+        <h2 class="section-title">
+            Our little <em>dreams</em>
+        </h2>
+
+        <div class="future-box">
+
+            <p>
+                I don't just want memories with you.
+                I want a whole collection of tomorrows.
+            </p>
+
+            <div class="dreams">
+
+                <div class="dream">🌎 Travel the world</div>
+                <div class="dream">🏔️ Our little mountain house</div>
+                <div class="dream">🏡 Build a home together</div>
+                <div class="dream">💍 A future together</div>
+                <div class="dream">🤍 Keep choosing each other</div>
+
+            </div>
+
+            <p style="margin-top:35px;">
+                And maybe one day...
+            </p>
+
+            <p style="font-size:30px;">
+                Evara 🤍
+            </p>
+
+            <p>
+                A tiny name for one of the dreams
+                we've already imagined together.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="final">
+
+    <div class="final-content">
+
+        <div style="font-size:45px;">♡</div>
+
+        <h2>
+            I'm glad<br>
+            it became you.
+        </h2>
+
+        <p>
+            After everything life had taken me through,
+            finding you felt like finding a gift I never
+            knew I was waiting for.
+        </p>
+
+        <p>
+            You became my friend, my love, my favourite
+            person and a part of the future I dream about.
+        </p>
+
+        <p>
+            So if I could choose one person to keep
+            beside me through all the silly fights,
+            adventures, travels, ordinary days and
+            beautiful tomorrows...
+        </p>
+
+        <div class="signature">
+            I'd choose you, Munni. ❤️
+            <br><br>
+            — Aahana
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+function goToStory() {
+    document.getElementById("story").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
    
