@@ -337,7 +337,33 @@ section {
         transform: translateY(0);
     }
 }
+.gallery {
+    background: #fff1f4;
+}
 
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.photo-card {
+    background: white;
+    padding: 12px 12px 28px;
+    border-radius: 6px;
+    box-shadow: 0 15px 35px rgba(100,25,50,.15);
+    transform: rotate(-1deg);
+}
+
+.photo-card img {
+    width: 100%;
+    display: block;
+    border-radius: 3px;
+    object-fit: cover;
+    max-height: 600px;
+    }
 @media (max-width: 600px) {
     .cards {
         grid-template-columns: 1fr;
@@ -475,7 +501,21 @@ section {
 
     </div>
 </section>
+<section class="gallery">
+    <div class="inner">
+        <div class="section-label">Our memories</div>
 
+        <h2 class="section-title">
+            Little moments, <em>big memories</em>
+        </h2>
+
+        <div class="photo-grid">
+            <div class="photo-card">
+                <img src="Snapchat-1073332827.jpg" alt="Our memory">
+            </div>
+        </div>
+    </div>
+</section>
 <section class="little-things">
 
     <div class="inner">
