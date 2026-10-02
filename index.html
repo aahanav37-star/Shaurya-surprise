@@ -1,199 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>For My Munni ❤️</title>
+<title>For My Munni ❤️</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-            overflow: hidden;
-            font-family: Georgia, "Times New Roman", serif;
-            background:
-                radial-gradient(circle at 20% 20%, rgba(255,255,255,0.25), transparent 25%),
-                radial-gradient(circle at 80% 80%, rgba(255,150,180,0.25), transparent 30%),
-                linear-gradient(145deg, #ffccd9, #e85d7f 48%, #7d1029);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        .container {
-            width: 90%;
-            max-width: 600px;
-            text-align: center;
-            position: relative;
-            z-index: 5;
-            animation: appear 1.5s ease;
-        }
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    color: white;
+    background: #7d1029;
+}
 
-        .small-heart {
-            font-size: 48px;
-            display: inline-block;
-            animation: heartbeat 1.5s infinite;
-            filter: drop-shadow(0 4px 10px rgba(120,0,30,0.3));
-        }
+.section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 35px 22px;
+}
 
-        .little-line {
-            width: 70px;
-            height: 1px;
-            background: rgba(255,255,255,0.7);
-            margin: 18px auto;
-        }
+.opening {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.25), transparent 25%),
+        radial-gradient(circle at 80% 80%, rgba(255,150,180,0.25), transparent 30%),
+        linear-gradient(145deg, #ffccd9, #e85d7f 48%, #7d1029);
+    position: relative;
+    overflow: hidden;
+}
 
-        h1 {
-            font-size: clamp(32px, 8vw, 55px);
-            line-height: 1.08;
-            margin: 10px 0;
-            font-weight: normal;
-            letter-spacing: 1px;
-            text-shadow: 0 5px 20px rgba(90,0,30,0.25);
-        }
+.content {
+    max-width: 650px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
 
-        .subtitle {
-            font-size: 20px;
-            font-style: italic;
-            margin: 18px 0 5px;
-            opacity: 0.95;
-        }
+.heart-main {
+    font-size: 50px;
+    animation: beat 1.5s infinite;
+}
 
-        .name {
-            font-size: 28px;
-            margin-top: 5px;
-            letter-spacing: 3px;
-        }
+.line {
+    width: 70px;
+    height: 1px;
+    background: rgba(255,255,255,0.7);
+    margin: 18px auto;
+}
 
-        .button {
-            margin-top: 35px;
-            padding: 16px 30px;
-            border: 1px solid rgba(255,255,255,0.8);
-            border-radius: 50px;
-            background: rgba(255,255,255,0.18);
-            backdrop-filter: blur(10px);
-            color: white;
-            font-size: 17px;
-            font-family: Georgia, serif;
-            cursor: pointer;
-            transition: 0.3s ease;
-            box-shadow: 0 10px 30px rgba(80,0,20,0.2);
-        }
+h1 {
+    font-size: clamp(35px, 9vw, 58px);
+    line-height: 1.08;
+    font-weight: normal;
+    margin: 15px 0;
+}
 
-        .button:hover {
-            background: white;
-            color: #a51d45;
-            transform: translateY(-3px);
-        }
+.subtitle {
+    font-size: 20px;
+    font-style: italic;
+    opacity: 0.95;
+}
 
-        .from {
-            margin-top: 35px;
-            font-size: 14px;
-            opacity: 0.8;
-            letter-spacing: 1px;
-        }
+.name {
+    font-size: 29px;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
 
-        /* Floating hearts */
+.button {
+    margin-top: 35px;
+    padding: 16px 30px;
+    border: 1px solid white;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.18);
+    color: white;
+    font-size: 17px;
+    font-family: Georgia, serif;
+    cursor: pointer;
+}
 
-        .heart {
-            position: absolute;
-            bottom: -40px;
-            font-size: 18px;
-            opacity: 0;
-            animation: floatUp linear infinite;
-        }
+.button:hover {
+    background: white;
+    color: #a51d45;
+}
 
-        .heart:nth-child(1) {
-            left: 10%;
-            animation-duration: 8s;
-            animation-delay: 1s;
-        }
+.from {
+    margin-top: 35px;
+    font-size: 14px;
+    opacity: 0.8;
+}
 
-        .heart:nth-child(2) {
-            left: 25%;
-            animation-duration: 10s;
-            animation-delay: 3s;
-        }
+.story {
+    background:
+        radial-gradient(circle at 10% 10%, #ffb6c8, transparent 30%),
+        linear-gradient(160deg, #8b1733, #c72f58, #6d1027);
+}
 
-        .heart:nth-child(3) {
-            left: 45%;
-            animation-duration: 7s;
-            animation-delay: 0s;
-        }
+.story-card {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 28px;
+    padding: 35px 25px;
+    box-shadow: 0 15px 50px rgba(50,0,20,0.25);
+    backdrop-filter: blur(12px);
+}
 
-        .heart:nth-child(4) {
-            left: 65%;
-            animation-duration: 9s;
-            animation-delay: 2s;
-        }
+.story-card h2 {
+    font-size: 38px;
+    font-weight: normal;
+    margin-top: 0;
+}
 
-        .heart:nth-child(5) {
-            left: 82%;
-            animation-duration: 11s;
-            animation-delay: 4s;
-        }
+.story-card p {
+    font-size: 18px;
+    line-height: 1.8;
+}
 
-        @keyframes floatUp {
-            0% {
-                transform: translateY(0) scale(0.7);
-                opacity: 0;
-            }
+.highlight {
+    font-size: 23px !important;
+    font-style: italic;
+    margin-top: 25px;
+}
 
-            15% {
-                opacity: 0.6;
-            }
+.next {
+    margin-top: 25px;
+    padding: 13px 25px;
+    border: 1px solid white;
+    border-radius: 40px;
+    background: transparent;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    cursor: pointer;
+}
 
-            100% {
-                transform: translateY(-110vh) scale(1.3) rotate(20deg);
-                opacity: 0;
-            }
-        }
+.heart {
+    position: absolute;
+    bottom: -40px;
+    animation: floatUp 8s linear infinite;
+    opacity: 0;
+}
 
-        @keyframes heartbeat {
-            0%, 100% {
-                transform: scale(1);
-            }
+.h1 { left: 10%; animation-delay: 1s; }
+.h2 { left: 30%; animation-delay: 3s; }
+.h3 { left: 55%; animation-delay: 0s; }
+.h4 { left: 80%; animation-delay: 2s; }
 
-            50% {
-                transform: scale(1.15);
-            }
-        }
+@keyframes beat {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
 
-        @keyframes appear {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    15% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(20deg);
+        opacity: 0;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- Floating hearts -->
-    <div class="heart">♡</div>
-    <div class="heart">♥</div>
-    <div class="heart">♡</div>
-    <div class="heart">♥</div>
-    <div class="heart">♡</div>
+<section class="section opening" id="home">
 
-    <div class="container">
+    <div class="heart h1">♡</div>
+    <div class="heart h2">♥</div>
+    <div class="heart h3">♡</div>
+    <div class="heart h4">♥</div>
 
-        <div class="small-heart">♡</div>
+    <div class="content">
 
-        <div class="little-line"></div>
+        <div class="heart-main">♡</div>
+
+        <div class="line"></div>
 
         <h1>
             Happy Boyfriend's Day,<br>
@@ -208,7 +208,7 @@
             Munni ❤️
         </div>
 
-        <button class="button" onclick="openSurprise()">
+        <button class="button" onclick="openHeart()">
             Open My Heart ♡
         </button>
 
@@ -217,12 +217,107 @@
         </div>
 
     </div>
+</section>
 
-    <script>
-        function openSurprise() {
-            alert("I love you, Shaurya ❤️");
-        }
-    </script>
+
+<section class="section story" id="story">
+
+    <div class="content">
+
+        <div class="story-card">
+
+            <h2>Our Story ♡</h2>
+
+            <p>
+                Sometimes the most beautiful stories begin
+                in the most ordinary ways.
+            </p>
+
+            <p>
+                We started as classmates.
+                Then somehow, we became UNO partners,
+                sitting together, playing with our friends,
+                laughing over silly little things.
+            </p>
+
+            <p>
+                And somewhere between those games,
+                random conversations, friendship and
+                all those little moments...
+                you became someone very special to me.
+            </p>
+
+            <p class="highlight">
+                “I never knew that my UNO partner
+                would become my favourite person.”
+            </p>
+
+            <p>
+                Life had already taken me through some
+                difficult chapters before you came into my life.
+                But you stood beside me, supported me,
+                and helped me find my way through them.
+            </p>
+
+            <p>
+                And slowly, without even realizing it,
+                I started falling for you.
+            </p>
+
+            <button class="next" onclick="document.getElementById('love').scrollIntoView()">
+                There's more... ♡
+            </button>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="section story" id="love">
+
+    <div class="content">
+
+        <div class="story-card">
+
+            <h2>And Then There Was Us ❤️</h2>
+
+            <p>
+                You took the first step.
+                I took a little more time.
+                And eventually, I said yes.
+            </p>
+
+            <p>
+                And I'm so glad I did.
+            </p>
+
+            <p>
+                Because today, you're not just my boyfriend.
+                You're my best friend, my favourite person,
+                my partner in all our silly fights,
+                and the person whose little efforts
+                mean more to me than you probably realize.
+            </p>
+
+            <p class="highlight">
+                We fight like kids...
+                and somehow love each other even more afterwards. 😂❤️
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+
+<script>
+function openHeart() {
+    document.getElementById("story").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+</script>
 
 </body>
-    </html>
+</html>
